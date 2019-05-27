@@ -1,0 +1,57 @@
+介绍Android开发中的常用的数据存储之数据库存储
+1.SQLite数据库的特点？
+    小型的、效率高、开源的、关系型数据库，可嵌入、支持事务操作、无数据类型、程序驱动。
+    跨平台的磁盘文件、代码量少、api简单易用。
+
+2.SQLite数据库数据类型
+  Integer varchar(10) float double char(10) text
+
+--------------------------------------------------------------------------------------------
+
+3.sql回顾
+  3.1 创建表的语句
+     create table 表名(字段名称1 数据类型 约束,字段名称2 数据类型 约束......)
+     比如：create table user(_id Integer primary key,name varchar(10),age Integer not null)
+
+  3.2 删除表的语句
+      drop table 表名
+      比如：drop table user
+
+  3.3 插入数据
+      insert into 表名[字段，字段] values(值1，值2...)
+      比如：insert into user(_id,age) values(1,50)  //指定顺序一样
+           insert into user values(2,"mayun",50)//从一个字段开始插入
+
+  3.4 删除数据
+      delete from 表名 where 删除的条件
+      比如：delete from user where _id=2
+
+  3.5 查询语句
+      select 字段名 from 表名 where 查询条件 group by 分组字段 having 筛选条件 order by 排序字段
+      比如：select _id,name from user;
+           select * from user where _id=1
+           select * from user where _id<>1 //不等于
+           select * from user where _id=1 and age>18
+           select * from user where name like "%小%"
+           select * from user where name like "_小%"
+           select * from user where name is null
+           select * from user where age between 10 and 20
+           select * from user where age>18 order by _id
+
+  3.6 修改数据
+      update 表名 set 字段=新值 where 修改的条件
+      比如：update user set name="老马",age=55 where _id =2
+
+--------------------------------------------------------------------------------------------
+
+[SQLite数据库的操作]
+-SQLite数据库的创建?
+   SQLiteOpenHelper   ------> 帮助类
+   onCreate()         ------> 创建方法
+   onUpgrade()        ------> 数据库升级方法
+   onOpen()           ------> 打开数据库方法
+
+-SQLite数据表增删查改操作?
+    调用execSQL(sql)语句，正确的Sql语句(无返回结果)
+
+如何使用Android API实现数据库的添加，删除和修改操作以及FrameWork层如何对增删改方法的封装？

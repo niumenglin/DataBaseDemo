@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_createdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建数据库"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="插入数据"
+        android:onClick="normalClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="修改数据"
+        android:onClick="normalClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="删除数据"
+        android:onClick="normalClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="查询数据"
+        android:onClick="normalClick"
+        android:background="#ffbbff"/>
+
+
+
+    <Button
+        android:id="@+id/btn_insertapi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="插入数据api"
+        android:onClick="onClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_updateapi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="修改数据api"
+        android:onClick="onClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_deleteapi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="删除数据api"
+        android:onClick="onClick"
+        android:background="#ffbbff"/>
+
+    <Button
+        android:id="@+id/btn_queryapi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="查询数据api"
+        android:onClick="onClick"
+        android:background="#ffbbff"/>
+
+</LinearLayout>
